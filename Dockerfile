@@ -1,5 +1,6 @@
 FROM postgres:latest
 
+ADD ./entrypoint.sh /usr/local/bin/entrypoint.sh
 ENV POSTGRES_MAX_CONNECTIONS=1000
 
-CMD ["postgres", "-c", "max_connections=${POSTGRES_MAX_CONNECTIONS}"]
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
