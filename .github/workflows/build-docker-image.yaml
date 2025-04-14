@@ -41,5 +41,3 @@ jobs:
         push: true
         tags: ${{ steps.image_metadata.outputs.tags }}
         labels: ${{ steps.image_metadata.outputs.labels }}
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
